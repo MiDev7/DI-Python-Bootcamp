@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2 css</title>
+    <style>
+        div {
+            border: 3px solid rgb(36, 186, 100);
+            padding: 12px 30px;
+            margin: 10px 85px;  
+            background-color: rgb(192, 247, 215);
+            box-shadow: 0.1px 0.1px rgb(109, 167, 134) ;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        #important {
+            text-decoration: underline;
+            font-style: italic;
+        }
+        #flag {
+           
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            transition: 1.5s;
+        }
+        .part{
+            margin: 0;
+            padding: 0;
+            height: 33px;
+            border:none;
+            width: 16.8px;
+            
+        }
+        
+        #flag:hover {
+            background-color: rgb(0, 0, 0);
+            border-color:rgb(164, 164, 164)
+        }
+
+        #blue {
+            background-color: rgb(1, 37, 151);
+            
+        }
+
+        #white {
+            background-color: rgb(254, 254, 254) ;
+         
+        }
+
+        #red {
+            background-color:rgb(237, 39, 54) ;
+          
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Create a stuctured HTML file </p>
+
+        <p>Copy this paragraph and style it with Inline CSS first and then with a CSS stylesheet.</p>    
+            
+        <p id="important">Hello Everyone, Congratulation on your first day of coding at DevelopersInstitute</p>    
+            
+        <p>   What happens if you style this paragraph both with Inline CSS and with a CSS stylesheet ?</p>
+    </div>
+    <br>
+
+    <!--Exercise 3-->
+    <div id="flag">
+        <div class="part" id="blue"></div>
+        <div class="part" id="white"></div>
+        <div class="part" id="red"></div>
+    </div>
+</body>
+</html>
