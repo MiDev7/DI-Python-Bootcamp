@@ -12,11 +12,21 @@
 
         div {
             position: relative;
-            display: inline-block;
+            display: flex;
+            flex-direction: row;
+        }
+        div > div {
+            
+            position: relative;
+            
         }
 
+        #div2{
+            padding: auto;
+            margin: auto;
+        }
         h1 {
-            position: absolute ;
+            position: inherit;
             left: 0px;
             top: 0px;
             font-size: 60px;
@@ -27,7 +37,7 @@
         span {
             margin-top: 0;
             font-size: 14px;
-            position:absolute;
+            position: relative;
             top: -35px;
             opacity: 0.5;
         
@@ -48,7 +58,7 @@
             text-decoration: none;
             border-radius: 50px;
             transition: 0.6s;
-            position: absolute;
+            position: relative;
             left: -15px;
             top: -65px;
             font-size: 12px;
@@ -70,6 +80,8 @@
             position: absolute  ;
             padding: auto;
             position: relative;
+            border:2px rgb(241, 241, 183) solid;
+            
         }
 
         .image{
@@ -86,6 +98,8 @@
             text-align: center;
             background-color: rgb(246, 246, 238);
             border-radius: 10px;
+            box-shadow: 1px 1px 10px rgba(116, 116, 116, 0.816);
+            
         }
 
         #first_image {
@@ -110,9 +124,10 @@
             <div id="div1">
                 <img src="../movie_images/download.jpg" alt="Stanley Kubrick" id="Profile">
             </div>
-            <div>
+            <div id="div2">
                 <h1>Stanley Kubrick
-                    <br><span>Best Movie Director of all time.<br></span> <a href="https://www.imdb.com/name/nm0000040/" target="_blank"> Learn more</a> 
+                    <br><span>Best Movie Director of all time.<br></span> 
+                    <a href="https://www.imdb.com/name/nm0000040/" target="_blank"> Learn more</a> 
                 </h1>
             </div>
             
