@@ -1,0 +1,41 @@
+h1{
+  font-size: 30px;
+}
+.tablehead{
+  font-weight: bold;
+  text-align: center;
+  border-style: solid;
+  border-color: rgb(178, 178, 178);
+}
+
+table ,#div1{
+  margin: 0 150px;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+  padding: auto;
+  width: 50%;
+  height: 300px;
+  width: 500px;
+  border: 7px solid rgb(235, 103, 52);
+        
+}
+.tab1{
+  border-style: solid;
+  border-color: rgb(178, 178, 178);
+  text-align: justify;
+  
+}
+    
+#div1{
+  color: red;
+  text-align: center;
+  border-style: solid;
+  border-color: red;
+  
+}
+    
+
+

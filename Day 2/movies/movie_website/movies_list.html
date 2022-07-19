@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie_List</title>
+    <style>
+        body {
+            font-family: 'Quicksand' , sans-serif;
+        }
+
+        h1 {
+            position: relative;
+            left: 15em;
+            top: -4.5em;
+            font-size: 50px;
+            margin-bottom: 0;
+        }
+
+        span {
+            margin-top: 0;
+            font-size: 12px;
+            position: absolute;
+            top: 70px;
+            
+        }
+
+        header {
+            background-color: rgb(246, 246, 238);
+            margin: 0;
+            border-bottom: 2px solid rgb(207, 207, 185);
+        }
+
+        a {
+            background-color: rgb(0, 106, 255);
+            padding: 3px 8px;
+            text-decoration: none;
+            color: white;
+            border-radius: 50px;
+            transition: 1.5s;
+        }
+
+        a:hover{
+            background-color:rgb(0, 68, 163) ;
+        }
+
+
+        #Profile {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: 50% 50%;
+            border-radius: 50%;
+            margin: 90px 0px 0px 40px;
+            z-index: -1;
+            padding: auto;
+        }
+
+        .image{
+            max-width: 200px;
+            margin: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        li {
+            display: inline-block;
+            margin: 20px 20px;
+            padding: 10px 25px;
+            text-align: center;
+            background-color: rgb(246, 246, 238);
+            border-radius: 10px;
+        }
+
+        #first_image {
+            margin: 20px 20px 20px 0;
+            
+        }
+
+        ul {
+            list-style: none;
+            display: inline-block;
+            margin: 0;
+        }
+
+        b{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <img src="../movie_images/download.jpg" alt="Stanley Kubrick" id="Profile">
+        <h1>Stanley Kubrick
+            <br><span>Best Movie Director of all time. <a href="https://www.imdb.com/name/nm0000040/" target="_blank"> Learn more</a></span> 
+        </h1>
+    </header>
+    <main><br>
+        <ul>
+            <b>Here is the list of the Movies done by Stanley Kubrick</b> <br>
+            <li id="first_image">
+                Eyes Wide Shut <br>
+                <img src="../movie_images/Eye Wide Shut.jpg" alt="Eye Wide Shut" class="image" >
+            </li>
+            <li>
+                Full Metal Jacket <br>
+                <img src="../movie_images/Full Metal Jacket.jpg" alt="Full Metal Jacket" class="image">
+            </li>
+            <li>
+                The Shining <br>
+                <img src="../movie_images/The Shining.jpg" alt="The Shining" class="image"> 
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
