@@ -1,0 +1,25 @@
+* {
+    font-family: 'space-grotesk','quicksand',sans-serif;
+}
+.navbar {
+    background-color: #fdeb01;
+}
+
+main {
+    background-image: url(../Images/Waves-02.png);
+    opacity: 0.5;
+}
+
+.nav-item {
+    margin-left: 35px;
+}
+
+#small-icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+.navbar-light{
+    --bs-navbar-color: rgba(0, 0, 0, 0.75);
+    --bs-navbar-hover-color: rgba(0, 0, 0,1);
+}
