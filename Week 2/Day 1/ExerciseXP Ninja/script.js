@@ -35,9 +35,9 @@ true != true
 
 // Exercise 2
 let text = prompt("Type in numbers separated by a comma, to add the numbers: ")
-let inputNumber1 = text.split(",")
-console.log(Number(inputNumber1[0]) + " + " + Number(inputNumber1[1]) + " = " + (Number(inputNumber1[0]) + Number(inputNumber1[1])))
-alert(Number(inputNumber1[0]) + " + " + Number(inputNumber1[1]) + " = " + (Number(inputNumber1[0]) + Number(inputNumber1[1])))
+let inputNumber1 = text.replace(/,/g, "+")
+let result = eval(inputNumber1)
+console.log(result)
 
 // Exercise 3
 let str = prompt("Type a text on Nemo: ")
