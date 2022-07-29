@@ -14,7 +14,7 @@ for (let i = 0; i < 5; i++) {
     let name = names[i]
     if (typeof name !== "string"){
         continue
-    }
+    } 
     else if (typeof name == "string"){
         if (name[0].toUpperCase() !== name[0]){
             let new_name = name[0].toUpperCase()+ name.slice(1)
