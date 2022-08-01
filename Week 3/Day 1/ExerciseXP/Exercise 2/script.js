@@ -1,0 +1,10 @@
+const container = document.querySelector("div")
+container.style.backgroundColor = "rgb(000,200,255)"
+container.style.padding = "16px"
+const listContainer = document.querySelector("ul")
+const firstChild = listContainer.firstElementChild
+firstChild.style.display = "none"
+const lastChild = listContainer.lastElementChild
+lastChild.style.border = "2px solid black"
+const body = document.querySelector("body")
+body.style.fontSize = "35px"
