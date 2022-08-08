@@ -42,8 +42,12 @@ for (let i = 0; i < 2; i++) {
     let arrayContent =  allBooks[i]
     for (x in arrayContent) {
         let content = document.createElement("td")
+        if (x = "ImgUrl") {
+            let image = document.createElement("img")
+            image.setAttribute("src", arrayContent[x])
+            content.appendChild(image)
+        }
         content.textContent= arrayContent[x]
-        
         newRow.appendChild(content)
     }
 
@@ -53,7 +57,4 @@ for (let i = 0; i < 2; i++) {
     else if (arrayContent.alreadyRead == false) {
         newRow.style.color = "green"
     }
-    var myImage = document.createElement("img"); 
-        myImage.setAttribute("src", imgURL); 
-        document.getElementById("myImg").append(myImage);
 }
