@@ -16,7 +16,7 @@ SELECT first_name, last_name FROM students
 WHERE first_name LIKE '%a%';
 
 SELECT first_name, last_name FROM students
-WHERE first_name LIKE 'a%';
+WHERE lower(first_name) LIKE 'a%';
 
 SELECT first_name, last_name FROM students
 WHERE first_name LIKE '%a';
