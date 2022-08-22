@@ -18,8 +18,6 @@ f = open ('sowpods.txt','r')
 #     print(final_sentence)
 
 
-
-
 # get_words_from_file()
 
 # get_random_sentence(int(input('input a number: ')))
