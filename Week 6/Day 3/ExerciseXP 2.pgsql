@@ -12,11 +12,12 @@ WHERE replacement_cost < 15;
 -- We should check as it has a CONSTRAINT delete cascade which could eventually delete over table linked to it.
 
 -- Task 4: Find out how many rentals are still outstanding (ie. have not been returned to the store yet).
-SELECT * FROM rental
+SELECT count(*) FROM rental    
 WHERE return_date ISNULL;
 
 -- Task 5: Find the 30 most expensive movies which are outstanding (ie. have not been returned to the store yet)
 SELECT * FROM payment;
+
 SELECT inventory.inventory_id, film.rental_rate,film.title 
 FROM (rental JOIN inventory ON rental.inventory_id = inventory.inventory_id)
 JOIN film ON inventory.film_id = film.film_id
@@ -33,3 +34,39 @@ LIMIT 30;
 -- The 3rd film : A film that his friend Matthew Mahan rented. He paid over $4.00 for the rental, and he returned it between the 28th of July and the 1st of August, 2005.
 
 -- The 4th film : His friend Matthew Mahan watched this film, as well. It had the word “boat” in the title or description, and it looked like it was a very expensive DVD to replace.
+
+SELECT * FROM rental;
+SELECT * FROM actor_info
+WHERE first_name = 'Penelope' AND last_name = 'Monroe';
+
+SELECT * FROM film
+WHERE lower(description) LIKE '%sumo wrestler%';
+
+SELECT film.film_id, film.title
+FROM film
+JOIN film_actor
+ON film.film_id = film_actor.film_id
+JOIN actor
+ON film_actor.actor_id = actor.actor_id
+WHERE lower(description) LIKE '% sumo wrestler%' AND actor.first_name = 'Penelope' AND actor.last_name = 'Monroe';
+
+SELECT film.film_id,film.title FROM film
+WHERE film.length < 60 AND rating = 'R'AND lower(film.description) LIKE '%documentary%';
+
+
+SELECT film.film_id, film.title
+FROM film
+JOIN inventory
+ON  film.film_id = inventory.film_id
+JOIN rental
+ON inventory.inventory_id = rental.inventory_id
+JOIN customer
+ON rental.customer_id = customer.customer_id
+WHERE film.rental_rate > '4.00'AND rental.return_date > '28/07/2005' AND rental.return_date < '01/08/2005' AND customer.first_name = 'Matthew' AND customer.last_name = 'Mahan' ;
+
+SELECT film.film_id, film.title
+FROM film
+WHERE lower(film.title) LIKE '%boat%' OR lower(description) LIKE '%boat'
+ORDER BY film.replacement_cost DESC 
+LIMIT 1;
+

@@ -52,7 +52,7 @@ SELECT * FROM new_film;
 -- 9: last_update – when the review was last updated.
 
 CREATE TABLE customer_review (
-    review_id SERIAL,
+    review_id SERIAL PRIMARY KEY,
     film_id INT,
     language_id INT,
     title VARCHAR(150),
@@ -62,6 +62,7 @@ CREATE TABLE customer_review (
     FOREIGN KEY (film_id) REFERENCES new_film(id) ON DELETE CASCADE,
     FOREIGN KEY (language_id) REFERENCES language(language_id)
 );
+DROP TABLE customer_review;
 
 INSERT INTO customer_review (film_id,language_id,title,score,review_text,last_update)
 VALUES (1,1,'Best Film Ever',8.5,'The plot twists were fantastic, on top of that it clearly show the whim of youngster nowadays', '15/01/2022'),
