@@ -42,6 +42,8 @@ WHERE first_name = 'Penelope' AND last_name = 'Monroe';
 SELECT * FROM film
 WHERE lower(description) LIKE '%sumo wrestler%';
 
+
+-- Park Citizen
 SELECT film.film_id, film.title
 FROM film
 JOIN film_actor
@@ -50,10 +52,12 @@ JOIN actor
 ON film_actor.actor_id = actor.actor_id
 WHERE lower(description) LIKE '% sumo wrestler%' AND actor.first_name = 'Penelope' AND actor.last_name = 'Monroe';
 
+
+-- Crossing Divorce
 SELECT film.film_id,film.title FROM film
 WHERE film.length < 60 AND rating = 'R'AND lower(film.description) LIKE '%documentary%';
 
-
+-- Sugar Wonka
 SELECT film.film_id, film.title
 FROM film
 JOIN inventory
@@ -64,9 +68,17 @@ JOIN customer
 ON rental.customer_id = customer.customer_id
 WHERE film.rental_rate > '4.00'AND rental.return_date > '28/07/2005' AND rental.return_date < '01/08/2005' AND customer.first_name = 'Matthew' AND customer.last_name = 'Mahan' ;
 
+
+-- Stone Fire
 SELECT film.film_id, film.title
 FROM film
-WHERE lower(film.title) LIKE '%boat%' OR lower(description) LIKE '%boat'
-ORDER BY film.replacement_cost DESC 
+JOIN inventory
+ON  film.film_id = inventory.film_id
+JOIN rental
+ON inventory.inventory_id = rental.inventory_id
+JOIN customer
+ON rental.customer_id = customer.customer_id
+WHERE customer.first_name = 'Matthew' AND customer.last_name = 'Mahan'  AND (lower(film.title) LIKE '%boat%' OR lower(description) LIKE '%boat%')  
+ORDER BY replacement_cost DESC 
 LIMIT 1;
 
