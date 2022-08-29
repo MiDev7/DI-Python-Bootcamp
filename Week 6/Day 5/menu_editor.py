@@ -1,8 +1,6 @@
-from operator import truediv
-from db import MenuItem as mi
-
+from db import MenuItem as Mi
 def load_manager():
-    client = mi()
+    client = Mi()
 
 
 def show_user_menu():
@@ -17,7 +15,7 @@ def show_user_menu():
         def add_item_to_menu():
             item_name = input("Input item's name: ")
             item_price = input("Input item's price: ")
-            item = mi(item_name,item_price)
+            item = Mi(item_name,item_price)
             if item.save():
                 print("item was added successfully.")
             else : 
@@ -28,29 +26,29 @@ def show_user_menu():
     elif user_input == "b":
         def remove_item_from_menu():
             item_name = input("Input item's name: ")
-            item_price = input("Input item's price: ")
-            item = mi(item_name,item_price = None)
+            item = Mi(item_name,item_price = 0)
             deleted = item.delete()
             if deleted :
                 try:
-                    result = mi.get_by_name(item_name)
+                    result = Mi.get_by_name(item_name)
                     print(result)
                     pass
                 except:                     
                     print("Error")
 
-                print("Your item has been successfully removed")
+            
+            print("Your item has been successfully removed")
 
         remove_item_from_menu()
     
     elif user_input == "v":
         def show_restaurant_menu():
-            mi.all()
+            Mi.all()
         show_restaurant_menu()
 
     elif user_input == "x":
         def exit():
-            mi.all()
+            Mi.all()
             print("Good Bye")
 
         exit()

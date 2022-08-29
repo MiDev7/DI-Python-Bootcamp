@@ -41,9 +41,9 @@ class MenuItem:
         cursor = connection.cursor()
         query = """
             DELETE FROM menu
-            WHERE item_name = (%s) ;
+            WHERE item_name = (%s) OR item_price =(%s) ;
         """
-        result = cursor.execute(query,str(self.name))
+        result = cursor.execute(query,(str(self.name),str(self.item_price)))
         connection.commit()
         connection.close()
         return result
